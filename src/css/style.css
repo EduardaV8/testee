@@ -1,0 +1,555 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.animated-hidden-element {
+    opacity: 0;
+}
+
+.animate__delay-6s {
+    animation-delay: 6s;
+}
+
+.animate__delay-7s {
+  animation-delay: 7s;
+}
+
+.animate__delay-8s {
+  animation-delay: 8s;
+}
+
+.animate__delay-9s {
+  animation-delay: 9s;
+}
+
+/******************* Navbar *******************/
+.bg-light {
+    background-color: transparent !important;
+}
+
+.navbar {
+    padding: 40px 22px;
+}
+
+.navbar-toggler-icon{
+    width: 1.9em;
+    height: 1.9em;
+}
+
+.navbar-light .navbar-nav .nav-link, .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: white !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: src="imagem/WhatsApp Image 2025-02-05 at 01.08.39.jpeg";    
+}
+
+ul {
+    gap: 30px;
+}
+
+a {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700 !important;
+    font-size: 1.3rem;
+    max-width: fit-content;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: #7EB300;
+}
+
+.line {
+    position: relative;
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .line:hover::before{
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+}
+
+.dropdown-menu{
+    background-color: transparent;
+    border: none;
+}
+
+.dropdown-item{
+    color: white !important;
+    font-size: 1.2rem;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.959) !important;
+}
+
+/******************* start *******************/
+.start {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(68.58% 67.02% at 50% 50%, rgba(0, 0, 0, 0.00) 53.6%, rgba(0, 0, 0, 0.50) 91.75%), url('../img/WhatsApp\ Image\ 2025-02-24\ at\ 23.43.08.jpeg'), lightgray 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 30%; 
+}
+
+.social-media {
+    float: right;
+    text-align: center;
+    margin-right: 30px;
+    margin-top: 11%;
+}
+
+.icon-instagram {
+    margin-bottom: 10px;
+}
+
+
+
+/******************* main-races *******************/
+/* Estilo para a seção de informações sobre o atleta */
+.athlete-profile {
+    margin: 0px;
+    padding: 0px;
+    background: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.athlete-photo {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+
+    margin-left: -300px;
+}
+
+.athlete-info {
+    text-align: left;
+    flex: 1;
+    padding-left: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #7EB300;
+}
+
+
+/* Estilo para os cards */
+.athlete-details {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-bottom: 2px solid #ddd;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .athlete-details .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .athlete-details .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .card {
+        width: 30%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        width: 30%;
+    }
+}
+
+/* Efeitos de animação */
+.animated-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.animated-hidden-element {
+    visibility: hidden;
+}
+
+.animated-item.animated-hidden-element {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/******************* about *******************/
+.about,.forms-disclosure {
+    margin-top: 100px;
+}
+
+.col-4 {
+    padding: 0;
+    flex: none;
+    max-width: 46%;
+    text-align: left;
+}
+
+.about .col-md-auto,.forms-disclosure .col-md-auto {
+    padding: 0;
+}
+
+.about .title  .title-1,.about .title  .title-2 {
+    text-align: left;
+}
+
+.about p {
+    text-align: left;
+}
+
+.about .text,.forms-disclosure .text {
+    padding-top: 30px;
+}
+
+.about .title {
+    margin-left: 80px;
+    margin-top: 0;
+}
+/* Seção das tabelas */
+.pace-tables {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.pace-tables h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #f5ebeb;
+}
+
+/* Estilização das tabelas */
+.table-container {
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(151, 149, 149, 0.5);
+}
+
+.table-container h3 {
+    font-size: 24px;
+    color: #131212;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 18px;
+}
+
+th {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+
+}
+/******************* data *******************/
+h2 {
+    color: rgba(126, 179, 0, 0.80);
+    font-family: Biryani;
+    font-size: 5rem;
+    margin-bottom: 0;
+}
+
+.data .row {
+    margin: 10%;
+    margin-bottom: 7%;
+}
+
+.data .col-md-auto {
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+}
+
+/******************* gallery *******************/
+.gallery .col {
+    padding: 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.image-gallery {
+    width: 100%;
+}
+
+.image-gallery:hover {
+    transform: scale(1.16);
+    transition: 250ms linear; 
+    /* cursor: pointer; */
+    position: relative;
+    z-index: 1;
+}
+
+.items-body,.carousel-item,.carousel-inner {
+    max-width: 100%;
+}
+
+/******************* forms-disclosure *******************/
+.forms-disclosure {
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.forms-disclosure .title {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #f5ebeb;
+}
+
+.table-responsive {
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(151, 149, 149, 0.5);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.table th {
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .forms-disclosure {
+        padding: 30px;
+    }
+    .table th, .table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+
+
+/******************* sponsors *******************/
+.sponsors h5, .sponsors .media-body, .sponsors .col-4{
+    max-width: fit-content ;
+}
+
+.sponsors .media {
+    margin: 0px 60px 40px;
+    cursor: pointer;
+}
+.media img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.sponsors {
+    margin-top: 220px;
+}
+
+.sponsors .justify-content-center {
+    margin-top: 40px;
+}
+
+.sponsors h5 {
+    font-family: Biryani;
+}
+
+.sponsors a {
+    color: black;
+}
+
+/******************* sponsorship-issue *******************/
+.sponsorship-issue {
+    background: rgba(126, 179, 0, 0.07);
+    padding: 20px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.sponsorship-issue button h1 {
+    font-family: Biryani;
+    font-size: 1.3rem;
+    padding: 1.7rem 2rem 1rem;
+}
+
+.sponsorship-issue a {
+  text-decoration: none;
+  color: white;
+}
+
+.sponsorship-issue h1 {
+    margin: 0 !important;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #7EB300;
+    border-color: #7EB300;
+}
+
+.btn {
+    border: 0;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #76a801;
+    border-color: #76a801;
+}
+
+.btn-success:focus {
+    color: rgb(255, 255, 255);
+    background-color: #76a801;
+    border-color: #76a801;
+    box-shadow: #76a801 0px 0px 0px 0.2rem;
+}
+
+.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: #76a801;
+    border-color: #76a801;
+}
+
+.btn-success:not(:disabled):not(.disabled):active:focus, .show > .btn-success.dropdown-toggle:focus, .btn-success:focus {
+    box-shadow: #a9e421 0px 0px 0px 0.2rem;
+}
+
+.sponsorship-issue .text-copyright {
+    margin-top: 5rem;
+    font-size: 1rem;
+}
+
+.sponsorship-issue .text-copyright a {
+  margin-top: 5rem;
+  font-family: "Titillium Web";
+  font-weight: 400 !important;
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+}
+
+.sponsorship-issue .text-copyright:hover {
+  margin-top: 5rem;
+  font-size: 1rem;
+  text-decoration: underline;
+}
